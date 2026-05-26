@@ -1,170 +1,68 @@
-# Ex No: 03 Implementation-Analysis-of-D-flipflop-using-Cadence-EDA-Tools
-      
+# Ex No: 03 - Implementation & Analysis of D Flip-Flop using Cadence EDA Tools
 
-## Aim:
-To design and implement a D-flip-flop using Cadence EDA tools, simulate its behavior, and analyze key performance parameters such as timing, power consumption, and resource utilization for a comprehensive understanding of sequential logic circuits.
+## Aim
+The aim is to design, implement, and analyze a D flip-flop using Cadence EDA tools, ensuring accurate sequential logic operation through waveform analysis and performance verification.
 
-## Tools Required:
+## Tools Required
 
-•	Personal Computer
+### Cadence EDA Suite
+- **Virtuoso Schematic Editor** (for circuit design)
+- **Spectre Simulator** (for circuit simulation)
 
-•	Cadence Virtuoso Software
+### Process Design Kit (PDK)
+- CMOS technology library (e.g., 180nm, 45nm node)
 
+### Computer System
+- Minimum **4GB RAM** and a **multi-core processor**
 
-## Circuit Diagram:
+## Procedure
 
-![IMG-20241115-WA0005](https://github.com/user-attachments/assets/65ea86c2-ccb3-4f94-b2ec-035f42896902)
+### 1. Launch Cadence Virtuoso Environment
+- Open the Cadence Virtuoso tool and set up the working library.
+- Create a new schematic cell view for the D flip-flop design.
 
+### 2. Schematic Design
+- Select NMOS and PMOS transistors from the library.
+- Design the D flip-flop circuit with key components such as clock signal input, D input, and Q output.
+- Implement feedback connections to enable sequential behavior.
+- Connect appropriate voltage sources for logic control and supply.
 
+### 3. Simulation
+- Verify the schematic design for connection errors.
+- Launch the Analog Design Environment (ADE).
+- Configure transient analysis to observe timing behavior and output transitions.
+- Set simulation parameters such as clock frequency, voltage levels, and delay conditions.
+- Use Spectre simulator to perform transient analysis and functional verification.
 
-## SCHEMATIC SIMULATION:
+### 4. Waveform Analysis
+- Observe the output waveform to confirm correct D flip-flop functionality.
+- Ensure that the Q output follows the D input on the rising edge of the clock signal.
 
+## Circuit Diagram
 
-PROCEDURE FOR CREATING THE SCHEMATIC SIMULATION
-Commands to get into Cadence
-1.	Right Click and open the terminal window
-2.	Type the following commands as follows and press enter.
-•	csh
-•	source /cadence/install/cshrc
-•	virtuoso 
-Procedure for Schematic simulation using Cadence
+### 1. Tri State D Flip-Flop
+![image](https://github.com/user-attachments/assets/ddf3603b-bdfd-41f2-8a98-4ad93862fd9f)
 
-1.	Now two windows must open i)virtuoso/command interpreter window ii)”Whats New…”
-2.	Close the 2nd window
-3.	Use 1st window i.e virtuoso window(CIW) for further processing.
-i.	Create a New Library
-ii.	Create Schematic Cell view.
-iii.	Create the Symbol for schematic Cell view.
-iv.	Create the test Cell view.
-v.	Analog simulation by spectre
+### 2. Schematic of D Flip-Flop
+<img width="1919" height="1199" alt="Screenshot 2026-04-27 155514" src="https://github.com/user-attachments/assets/a9b7136a-7fed-4011-91aa-9ff59350bd23" />
 
 
+### 3. Transient Response Setup
 
-i)	Procedure for Creating New Library.
+![image](https://github.com/user-attachments/assets/a1b87a68-274c-45f4-8262-036a6c11c4d8)
 
-•	File –New – Library
+![image](https://github.com/user-attachments/assets/12a4c141-c3f6-4efd-a66f-a89c70848bcd)
 
-•	Name : Give name for ur library Ex: VLSILAB_EXP_1
 
-•	Enable Attach to an existing technology library, Click OK
 
-•	Attach the library to the technology library gpdk045.Click OK
-ii)	Create Schematic Cell view.
-•	Go to 1st window i.e virtuoso(CIW)
+## Output
 
-•	File-New-Cell view
+### 1. Transient Analysis Output
+<img width="1919" height="1199" alt="Screenshot 2026-04-27 155453" src="https://github.com/user-attachments/assets/37817e30-3550-41dc-9156-6e8e3e42d6ab" />
 
-•	Setup the new file form
-	  Library: Select the one you a created.
-	  Cell : Give the experiment name Ex: Inverter View_Schematic
-	  Type: Schematic press OK
-•	Add the required components from the libraries and make the connections.
 
-• Go to instance fixed menu or use shortcut key “I” from keypad to go instances
 
-•	Click on browse. This opens the library browser
-
-•	Now select the appropriate library for components like 
-• Gpdk45 ------------------------nmos1v,  pmos1v
-
-• Create Input and Output pins
-
-•	Make the connections by using fixed narrow wire key
-
-•	Click Check and Save button
-![Screenshot 2024-10-21 183932](https://github.com/user-attachments/assets/aa5a1ae8-d448-42ae-abe9-206b3c2d91e9)
-
-
-
-
- 
-iii)	Creating the Symbol for schematic Cell view
-
-•	In the schematic window, execute 
-
-•	Create – Cell view – From Cell view
-
-•	The cell view from cell view window appears
-
-•	Check Lib Name, Cell Name, From View name must be schematic Press ok
-
-•	Now Symbol generation form appears. Click Ok If No changes required
-
-•	A new window with with default symbol is created.
-
-•	Edit the symbol if you want to give actual symbol shape else continue.
-
-•	Execute Create-Cell view-from cell view
-
-•	Library Name and Cell Name must be same which you have used for schematic. Press OK
-
-•	Check for the position of pin side.Prss OK
-
-•	Edit for the shape by Create-Shape-Choose required options to edit.
-![Screenshot 2024-10-21 184322](https://github.com/user-attachments/assets/7e57d9c0-ec1c-47ed-a24d-207686f31bda)
-
-
-
-iv)	Creating the new test cell view
-
-•	Go to CIW window, Execute File-New-Cell view
-
-•	Setup the new file form
-
-•	Library: Select the one you created.
-
-•	Cell: Cell name must be different from the name used in schematic cell view. Ex: Inverter_test
-
-•	View: Schematic
-
-•	Type: Schematic press OK
-
-•	Follow the step 3(ii)  to make the required connections
-![Screenshot 2024-10-21 185248](https://github.com/user-attachments/assets/7c652d51-59f0-4ca4-b63d-c40ac73c1454)
-
-
-
- 
-## Analog simulation by SPECTRE.
-•	In test cell view window
-
-•	Launch – ADE L(Analog Design Environment)
-
-•	Execute Setup—Simulation/directory/Host A new window opens
-
-•	Set the simulation window to spectre and click ok
-
-•	Execute Analysis – Choose. A window opens.
-
-•	Select the type and set the specifications and press OK
-
-•	Execute Output s—to be plotted – Select on Schematic
-
-•	Then Select the INPUT WIRE(Vin ) and OUTPUT WIRE(Vout) from your test Schematic using mouse
-
-•	Execute Simulation -- Net list and Run
-![Screenshot 2024-10-21 192323](https://github.com/user-attachments/assets/9a54381d-3da1-461c-910b-d2181612cbee)
-
-
-
-## For Transient Analysis Settings and Output
- 
-![Screenshot 2024-10-21 185609](https://github.com/user-attachments/assets/6d3d5199-bec0-4d64-b9fd-cbf55e6a92c5)
-![Screenshot 2024-10-21 192517](https://github.com/user-attachments/assets/595cee10-081e-49d8-af5c-923645123372)
-
-
-
-## Result:
-
-The design and implementation of the D-flip-flop using Cadence EDA tools were successfully completed. The simulated results confirmed the correct operation of the flip-flop, with proper synchronization of the input data with the clock signal. Key performance parameters such as propagation delay, power consumption, and area utilization were evaluated, aligning with expected theoretical values.
-
-
-
-
-
-
-
-
-
-
-
+## Results
+1. Successfully designed the D flip-flop schematic using Cadence EDA tools.
+2. The simulation results verified the correct sequential logic behavior, ensuring that the Q output correctly follows the D input on the rising edge of the clock.
+3. The waveform analysis demonstrated the expected timing behavior and performance of the D flip-flop circuit.
